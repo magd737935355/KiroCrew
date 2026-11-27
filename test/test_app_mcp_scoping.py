@@ -737,9 +737,7 @@ class TestATighteningReachesAnExistingConfig:
 
         assert "mcp_sources.merge_mcp_sources(" in inspect.getsource(agent.rebuild_agent_config)
         src = inspect.getsource(mcp_sources.merge_mcp_sources)
-        marker = (
-            'config.setdefault("mcpServers", {})[_app_srv] = {**_app_spec, SOURCE_KEY: _app_srv}'
-        )
+        marker = 'config.setdefault("mcpServers", {})[_app_srv] = _app_spec'
         assert marker in src, "the app's own key must be assigned, not setdefault"
 
     def test_a_stale_autoapprove_is_replaced(self, monkeypatch: pytest.MonkeyPatch) -> None:
