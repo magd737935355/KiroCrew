@@ -596,7 +596,7 @@ jobs:
           github.actor != 'dependabot[bot]' && steps.scope.outputs.ui == 'true' && steps.human_override.outputs.active != 'true'
           && steps.evidence.outputs.screens == 'true'
           )
-        uses: anthropics/claude-code-action@2dca132ff0e0c4094ce6048b422c6915a071210b # v1.0.247
+        uses: anthropics/claude-code-action@eb56b6666facdbd501035f4a0269d8caee2e7a8b # v1.0.289
         with:
           use_bedrock: "true"
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -742,7 +742,7 @@ jobs:
           && (
           github.actor != 'dependabot[bot]' && steps.scope.outputs.ui == 'true' && steps.human_override.outputs.active != 'true'
           )
-        uses: anthropics/claude-code-action@2dca132ff0e0c4094ce6048b422c6915a071210b # v1.0.247
+        uses: anthropics/claude-code-action@eb56b6666facdbd501035f4a0269d8caee2e7a8b # v1.0.289
         with:
           # Inference via Amazon Bedrock. Model id form (bare, regional `us.`
           # inference profile, no `[1m]` tag) is load-bearing — see the
